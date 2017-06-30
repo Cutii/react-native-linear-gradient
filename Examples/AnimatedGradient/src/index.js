@@ -6,6 +6,7 @@ import {
 } from 'react-native';
 import TimerMixin from 'react-timer-mixin';
 import LinearGradient from 'react-native-linear-gradient';
+import createClass from 'create-react-class';
 
 function incrementColor(color, step) {
   const intColor = parseInt(color.substr(1), 16);
@@ -13,7 +14,7 @@ function incrementColor(color, step) {
   return `#${'0'.repeat(6 - newIntColor.length)}${newIntColor}`;
 };
 
-const AnimatedGradient = React.createClass({
+const AnimatedGradient = createClass({
   mixins: [TimerMixin],
 
   getInitialState() {
